@@ -3,9 +3,12 @@ import models.Car;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
         CarController controller = new CarController();
-        Car
+        Car[] carros = makeCarsList();
+        controller.sortByName(carros);
+        for (Car car : carros) {
+            System.out.println(car);
+        }
     }
 
 
